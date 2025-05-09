@@ -55,9 +55,9 @@ ROOT_URLCONF = 'web.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Look in the global templates folder
+        'APP_DIRS': True,  # Look in app's templates folders if necessary
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
