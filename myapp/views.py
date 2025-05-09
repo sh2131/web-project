@@ -1,32 +1,16 @@
 from django.shortcuts import render
-from django.http import Http404
 
 def home(request):
-    try:
-        return render(request, "home.html")
-    except TemplateDoesNotExist:
-        raise Http404("Template not found")
+    return render(request, "home.html")
 
 def about(request):
-    try:
-        return render(request, "about.html")
-    except TemplateDoesNotExist:
-        raise Http404("Template not found")
+    return render(request, "about.html")
 
 def contact(request):
-    try:
-        return render(request, "contact.html")
-    except TemplateDoesNotExist:
-        raise Http404("Template not found")
+    return render(request, "contact.html")
 
 def services(request):
-    try:
-        return render(request, "services.html")
-    except TemplateDoesNotExist:
-        raise Http404("Template not found")
+    return render(request, "services.html")
 
 def portfolio(request):
-    try:
-        return render(request, "portfolio.html")
-    except TemplateDoesNotExist:
-        raise Http404("Template not found")
+    return render(request, "portfolio.html")
