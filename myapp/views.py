@@ -5,7 +5,8 @@ from django.shortcuts import render, HttpResponse
 
 
 def home(request):
-    return HttpResponse("It works!")
+   templates = loader.get_template("home.html")
+    return HttpResponse(templates.render())
 
 
 
